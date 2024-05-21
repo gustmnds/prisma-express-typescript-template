@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 const configSchema = z.object({
-    PORT: z.number().int().nonnegative(),
+    PORT: z.coerce.number().int().nonnegative(),
     DATABASE_URL: z.string()
 });
 
